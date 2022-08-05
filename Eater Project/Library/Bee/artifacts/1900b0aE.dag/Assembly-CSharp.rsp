@@ -389,6 +389,8 @@
 "Assets/Game/Models/Characters-20220804T205515Z-001/Characters/Toon babies/scripts/TBMove.cs"
 "Assets/Game/Models/Characters-20220804T205515Z-001/Characters/ToonTeens/scripts/poses.cs"
 "Assets/Game/Scripts/EatableObjects/EatableObjects.cs"
+"Assets/Game/Scripts/Enemy/Enemy.cs"
+"Assets/Game/Scripts/Enemy/EnemyType.cs"
 "Assets/Game/Scripts/GameManager/GameManager.cs"
 "Assets/Game/Scripts/MonoSingleton/MonoSingleton/MonoSingleton.cs"
 "Assets/Game/Scripts/PlayerController/IPlayerCollectable.cs"
