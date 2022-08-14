@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerState myState;
     private Joystick myJoystick;
     [SerializeField] private float speed;
+    public bool EatStatus = false;
+    public ResourceObject MyHandResourceObject;
     
     public PlayerState State
     {
@@ -72,5 +74,17 @@ public class PlayerController : MonoBehaviour
         transform.Translate(myDirection * Time.deltaTime * speed, Space.World);
         Vector3 lookAtPoz = transform.position + myDirection;
         transform.LookAt(lookAtPoz);
+    }
+
+    private IEnumerator EatStatusControl()
+    {
+        EatStatus = true;
+        yield return new WaitForSeconds(5f);
+        EatStatus = false;
+    }
+
+    public void EatFeature()
+    {
+        StartCoroutine(EatStatusControl());
     }
 }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager :MonoSingleton<GameManager>
 {
     public Joystick Joystick;
     public PlayerController Player;
+    public CraftManager CraftManager;
+    public Button CraftRyBut;
     void Start()
     {
         FinderObjects();

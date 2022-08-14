@@ -2,11 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EatableOnjects : MonoBehaviour,IPlayerCollectable
+public class EatableObjects : MonoBehaviour,IPlayerCollectable
 {
+    [SerializeField] private EatableObjectType myeatableObjectType;
     public void DoPlayerCollect()
     {
-        throw new System.NotImplementedException();
+        switch (myeatableObjectType)
+        {
+            case EatableObjectType.COLLECTED:
+                Destroy(gameObject);
+                break;
+            case EatableObjectType.EATER:
+                GameManager.Instance.Player.EatFeature();
+                Destroy(gameObject);
+                break;
+            default:
+                break;
+        }
     }
 
     // Start is called before the first frame update
